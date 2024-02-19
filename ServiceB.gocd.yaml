@@ -51,7 +51,7 @@ pipelines:
                 - '5'
                 command: ./randomfail.sh
                 run_if: passed
-    - package:	
+    - package:
         fetch_materials: true
         keep_artifacts: false
         clean_workspace: false
