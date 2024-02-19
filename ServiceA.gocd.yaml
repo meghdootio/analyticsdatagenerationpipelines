@@ -83,7 +83,7 @@ pipelines:
         git: https://github.com/meghdootio/commitstream.git
         shallow_clone: false
         auto_update: true
-        branch: master
+        branch: main
       ServiceAMaterial:
         pipeline: ServiceA
         stage: compile
@@ -118,7 +118,7 @@ pipelines:
         git: https://github.com/meghdootio/commitstream.git
         shallow_clone: false
         auto_update: true
-        branch: master
+        branch: main
       ManifestMaterial:
         pipeline: Manifest
         stage: buildmanifest
@@ -228,7 +228,7 @@ pipelines:
         git: https://github.com/meghdootio/commitstream.git
         shallow_clone: false
         auto_update: true
-        branch: master
+        branch: main
       E2EMaterial:
         pipeline: E2E
         stage: gentestreport
@@ -316,7 +316,7 @@ pipelines:
         git: https://github.com/meghdootio/commitstream.git
         shallow_clone: false
         auto_update: true
-        branch: master
+        branch: main
       UATMaterial:
         pipeline: UAT
         stage: deploy
