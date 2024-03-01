@@ -1,0 +1,393 @@
+
+format_version: 10
+pipelines:
+  ServiceAB:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAA
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAC:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAB
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAD:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAC
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAD:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAC
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAE:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAD
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAF:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAE
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAG:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAF
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAH:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAG
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAI:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAH
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAJ:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAI
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAK:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAJ
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAL:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAK
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAM:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAL
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAN:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAM
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAO:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAN
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAP:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAO
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAQ:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAP
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAR:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAQ
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAS:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAR
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAT:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAS
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAU:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAT
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAV:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAU
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAW:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAV
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAX:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAW
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAY:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAX
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
+  ServiceAZ:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      ServiceAA:
+        ignore_for_scheduling: false
+        pipeline: ServiceAY
+        stage: UnitTest
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
