@@ -1,6 +1,22 @@
 
 format_version: 10
 pipelines:
+  ServiceAA-Root:
+    group: Twenties
+    template: ServiceBaseTemplate
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      gocddatagenpipelines:
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
+        shallow_clone: false
+        auto_update: true
+        branch: main
+    parameters:
+      SLEEP_FIRST: '2'
+      SLEEP_SECOND: '12'
+      FAIL_VAR: '2'
   ServiceAB:
     group: Twenties
     template: ServiceBaseTemplate
@@ -15,7 +31,7 @@ pipelines:
         branch: main
       ServiceAA:
         ignore_for_scheduling: false
-        pipeline: ServiceAA
+        pipeline: ServiceAA-Root
         stage: UnitTest
     parameters:
       SLEEP_FIRST: '2'
