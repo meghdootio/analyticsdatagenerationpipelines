@@ -46,21 +46,6 @@ pipelines:
       SLEEP_FIRST: '2'
       SLEEP_SECOND: '12'
       FAIL_VAR: '2'
-  ServiceAD:
-    group: Twenties
-    template: ServiceBaseTemplate
-    label_template: ${COUNT}
-    lock_behavior: none
-    display_order: -1
-    materials:
-      ServiceAA:
-        ignore_for_scheduling: false
-        pipeline: ServiceAC
-        stage: UnitTest
-    parameters:
-      SLEEP_FIRST: '2'
-      SLEEP_SECOND: '12'
-      FAIL_VAR: '2'
   ServiceAE:
     group: Twenties
     template: ServiceBaseTemplate
