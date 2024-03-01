@@ -9,7 +9,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -29,7 +29,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -49,7 +49,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -69,7 +69,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -89,7 +89,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -109,7 +109,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -129,7 +129,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -149,7 +149,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -169,7 +169,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -189,7 +189,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -209,7 +209,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -229,7 +229,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -249,7 +249,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -269,7 +269,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -289,7 +289,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -309,7 +309,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -329,7 +329,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -349,7 +349,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -369,7 +369,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -389,7 +389,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -409,7 +409,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -429,7 +429,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -449,7 +449,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -469,7 +469,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
@@ -489,7 +489,7 @@ pipelines:
     display_order: -1
     materials:
       gocddatagenpipelines:
-        git: https://github.com/meghdootio/commitstream.git
+        git: /Users/srnaraya/workspace/gocddatagenpipelines
         shallow_clone: false
         auto_update: true
         branch: main
