@@ -2,7 +2,7 @@
 format_version: 10
 pipelines:
   EndToEndTest:
-    group: TheThirteenthWarrior
+    group: Twenties
     label_template: ${COUNT}
     lock_behavior: none
     display_order: -1
