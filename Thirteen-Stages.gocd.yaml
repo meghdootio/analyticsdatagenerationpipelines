@@ -34,7 +34,7 @@ pipelines:
                 - '0'
                 command: ./randomfail.sh
                 run_if: passed
-          DB usable:
+          DB-usable:
             timeout: 0
             tasks:
             - exec:
@@ -48,7 +48,7 @@ pipelines:
                 - '0'
                 command: ./randomfail.sh
                 run_if: passed
-          Storage usable:
+          Storage-usable:
             timeout: 0
             tasks:
             - exec:
@@ -62,7 +62,7 @@ pipelines:
                 - '0'
                 command: ./randomfail.sh
                 run_if: passed
-          MQ usable:
+          MQ-usable:
             timeout: 0
             tasks:
             - exec:
@@ -76,7 +76,7 @@ pipelines:
                 - '0'
                 command: ./randomfail.sh
                 run_if: passed
-          Kafka usable:
+          Kafka-usable:
             timeout: 0
             tasks:
             - exec:
@@ -90,7 +90,7 @@ pipelines:
                 - '0'
                 command: ./randomfail.sh
                 run_if: passed
-          EMail usable:
+          EMail-usable:
             timeout: 0
             tasks:
             - exec:
@@ -104,7 +104,7 @@ pipelines:
                 - '0'
                 command: ./randomfail.sh
                 run_if: passed
-          External Service Stubs usable:
+          External-Service-Stubs-usable:
             timeout: 0
             tasks:
             - exec:
