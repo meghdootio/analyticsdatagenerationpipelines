@@ -1,0 +1,1400 @@
+format_version: 10
+pipelines:
+  EndToEndTest:
+    group: TheThirteenthWarrior
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      CommitStream:
+        git: https://github.com/meghdootio/commitstream.git
+        shallow_clone: false
+        auto_update: true
+        branch: main
+    stages:
+    - Platform-Prerequisites:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          Browser-Farm-usable:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          DB usable:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Storage usable:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          MQ usable:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Kafka usable:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          EMail usable:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          External Service Stubs usable:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+    - Platform-Setup:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          Initialise-Browsers:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Create-Namespaces:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+    - Deployment:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          Database-Schema:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Message-Queues:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Application:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Kafka-Configuration:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+    - Test-Data-Setup:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          File-Seed:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Database-Content:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Queue-Seed:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+    - Integration-Tests:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          Search:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Add-To-Cart:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Discount:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Inventory-Check:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Payment:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Update-Inventory:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+    - Smoke-Test:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          Search-Add-Checkout-Pay:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Supplier-Self-Enroll:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Add-To-Inventory:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Workflow-A:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Workflow-B:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Workflow-C:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Workflow-D:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Workflow-E:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Workflow-F:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Workflow-G:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Workflow-H:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Workflow-I:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Workflow-J:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Workflow-K:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed				
+    - Full-Test-Suite:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          Customer-Workflows:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Administrative-Workflows:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Supplier-Workflows:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Fraud-Detection-Workflows:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Fulfillment-Workflows:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Customer-Returns-Workflows:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Restock-Workflows:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Campaign-Workflows:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Stock-Clearance-Workflows:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+    - Post-Test-Analysis:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          Automated-Analysis:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Workflow-Data-Integrity-Check:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          File-Checksum-Verification:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Malware-Attachment-Isolation:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+    - Data-Tear-Down:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          Database:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Queues:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Kafka:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          File-system:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Application:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+    - System-Scaledown:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          Database:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Browser-Farm:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Namespace:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          MessageQueue:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Kafka:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+    - Extra-Stage-A:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          Extra-Stage-A-Job-1:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-A-Job-2:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-A-Job-3:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-A-Job-4:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-A-Job-5:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-A-Job-6:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-A-Job-7:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-A-Job-8:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+    - Extra-Stage-B:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          Extra-Stage-B-Job-1:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-B-Job-2:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-B-Job-3:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-B-Job-4:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-B-Job-5:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-B-Job-6:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-B-Job-7:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-B-Job-8:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+    - Extra-Stage-C:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          Extra-Stage-C-Job-1:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-C-Job-2:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-C-Job-3:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-C-Job-4:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-C-Job-5:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-C-Job-6:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-C-Job-7:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-C-Job-8:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+    - Extra-Stage-D:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          Extra-Stage-D-Job-1:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-D-Job-2:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-D-Job-3:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-D-Job-4:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-D-Job-5:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-D-Job-6:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-D-Job-7:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
+          Extra-Stage-D-Job-8:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - '2'
+                - '12'
+                command: ./genrandom.sh
+                run_if: passed
+            - exec:
+                arguments:
+                - '0'
+                command: ./randomfail.sh
+                run_if: passed
