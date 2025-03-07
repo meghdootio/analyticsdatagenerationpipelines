@@ -5,6 +5,9 @@ pipelines:
     label_template: ${COUNT}
     lock_behavior: none
     display_order: -1
+    timer:
+      spec: "*/15 * * * *"
+      only_on_changes: no
     materials:
       git-c5536fd:
         git: https://github.com/meghdootio/commitstream.git
