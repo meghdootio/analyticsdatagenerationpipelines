@@ -6,7 +6,7 @@ pipelines:
     lock_behavior: unlockWhenFinished
     display_order: -1
     timer:
-      spec: "*/10 * * * *"
+      spec: "0 */10 * * * ?"
       only_on_changes: no
     materials:
       git-c5536fd:
