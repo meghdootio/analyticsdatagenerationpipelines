@@ -3,8 +3,11 @@ pipelines:
   EndToEndTest:
     group: TheThirteenthWarrior
     label_template: ${COUNT}
-    lock_behavior: none
+    lock_behavior: unlockWhenFinished
     display_order: -1
+    timer:
+      spec: "*/10 * * * *"
+      only_on_changes: no
     materials:
       CommitStream:
         git: https://github.com/meghdootio/commitstream.git
