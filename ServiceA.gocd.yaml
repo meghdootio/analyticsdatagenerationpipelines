@@ -25,8 +25,6 @@ pipelines:
         jobs:
           compilejob:
             timeout: 0
-            resources:
-              - linux
             tasks:
             - exec:
                 arguments:
@@ -49,8 +47,6 @@ pipelines:
         jobs:
           run-unit-test:
             timeout: 0
-            resources:
-              - linux
             tasks:
             - exec:
                 arguments:
@@ -73,8 +69,6 @@ pipelines:
         jobs:
           genpackage:
             timeout: 0
-            resources:
-              - linux
             tasks:
             - exec:
                 arguments:
@@ -110,8 +104,6 @@ pipelines:
         jobs:
           manifestgen:
             timeout: 0
-            resources:
-              - linux
             tasks:
             - exec:
                 arguments:
@@ -144,8 +136,6 @@ pipelines:
         jobs:
           create-ns:
             timeout: 0
-            resources:
-              - linux
             tasks:
             - exec:
                 arguments:
@@ -163,8 +153,6 @@ pipelines:
         jobs:
           db-migrator:
             timeout: 0
-            resources:
-              - linux
             tasks:
             - exec:
                 arguments:
@@ -182,8 +170,6 @@ pipelines:
         jobs:
           deploy-app:
             timeout: 0
-            resources:
-              - linux
             tasks:
             - exec:
                 arguments:
@@ -206,8 +192,6 @@ pipelines:
         jobs:
           test-process:
             timeout: 0
-            resources:
-              - linux
             tasks:
             - exec:
                 arguments:
@@ -230,8 +214,6 @@ pipelines:
         jobs:
           generate-report:
             timeout: 0
-            resources:
-              - linux
             tasks:
             - exec:
                 arguments:
@@ -264,8 +246,6 @@ pipelines:
         jobs:
           create-ns:
             timeout: 0
-            resources:
-              - ns-creator
             tasks:
             - exec:
                 arguments:
@@ -283,8 +263,6 @@ pipelines:
         jobs:
           db-migrator:
             timeout: 0
-            resources:
-              - db-updater
             tasks:
             - exec:
                 arguments:
@@ -302,8 +280,6 @@ pipelines:
         jobs:
           deploy-app:
             timeout: 0
-            resources:
-              - deployer
             tasks:
             - exec:
                 arguments:
@@ -321,8 +297,6 @@ pipelines:
         jobs:
           smoke-test:
             timeout: 0
-            resources:
-              - uatsmoketest-agent
             tasks:
             - exec:
                 arguments:
