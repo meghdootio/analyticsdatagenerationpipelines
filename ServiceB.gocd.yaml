@@ -25,6 +25,8 @@ pipelines:
         jobs:
           compileJob:
             timeout: 0
+            resources:
+              - linux
             tasks:
             - exec:
                 arguments:
@@ -42,6 +44,8 @@ pipelines:
         jobs:
           run-unit-test:
             timeout: 0
+            resources:
+              - linux
             tasks:
             - exec:
                 arguments:
@@ -64,6 +68,8 @@ pipelines:
         jobs:
           genpackage:
             timeout: 0
+            resources:
+              - linux
             tasks:
             - exec:
                 arguments:
