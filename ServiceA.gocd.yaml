@@ -36,7 +36,7 @@ pipelines:
                 run_if: passed
             - exec:
                 arguments:
-                - '2'
+                - '5'
                 command: ./randomfail.sh
                 run_if: passed
     - unit-test:
@@ -60,7 +60,7 @@ pipelines:
                 run_if: passed
             - exec:
                 arguments:
-                - '2'
+                - '5'
                 command: ./randomfail.sh
                 run_if: passed
     - package:
@@ -193,7 +193,7 @@ pipelines:
                 run_if: passed
             - exec:
                 arguments:
-                - '1'
+                - '5'
                 command: ./randomfail.sh
                 run_if: passed
     - test:
@@ -217,7 +217,7 @@ pipelines:
                 run_if: passed
             - exec:
                 arguments:
-                - '4'
+                - '5'
                 command: ./randomfail.sh
                 run_if: passed
     - gentestreport:
@@ -332,7 +332,7 @@ pipelines:
                 run_if: passed
             - exec:
                 arguments:
-                - '4'
+                - '5'
                 command: ./randomfail.sh
                 run_if: passed
   Prod:
@@ -403,7 +403,7 @@ pipelines:
                 run_if: passed
             - exec:
                 arguments:
-                - '1'
+                - '5'
                 command: ./randomfail.sh
                 run_if: passed
     - prodsmoketest:
@@ -425,7 +425,7 @@ pipelines:
                 run_if: passed
             - exec:
                 arguments:
-                - '2'
+                - '5'
                 command: ./randomfail.sh
                 run_if: passed
     - gentestreport:
